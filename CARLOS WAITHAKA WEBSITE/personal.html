@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Personal Diary — Carlos Waithaka</title>
+  <style>
+    :root{
+      --arsenal-red: #B71C1C;
+      --arsenal-dark: #7A0B0B;
+      --accent-gold: #D4AF37;
+      --bg: #fff8f6;
+      --card: #ffffff;
+      --muted: #444444;
+      --max-width: 900px;
+      --serif: Georgia, 'Times New Roman', Times, serif;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    html,body{
+      margin:0;
+      padding:0;
+      background: linear-gradient(180deg, var(--bg) 0%, #fff 40%);
+      font-family: var(--sans);
+      color: var(--muted);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.62;
+    }
+
+    .container{
+      max-width: var(--max-width);
+      margin: 36px auto;
+      padding: 28px;
+      background: var(--card);
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(122,11,11,0.06);
+      border-top: 6px solid var(--arsenal-red);
+      overflow-wrap: break-word;
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      margin-bottom: 18px;
+    }
+
+    .crest{
+      width:72px;
+      height:72px;
+      border-radius:10px;
+      background: linear-gradient(180deg,var(--arsenal-red),var(--arsenal-dark));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color: #fff;
+      font-weight:700;
+      box-shadow: 0 6px 18px rgba(122,11,11,0.12);
+    }
+
+    h1{
+      margin:0;
+      font-family: var(--serif);
+      font-size:28px;
+      color: var(--arsenal-dark);
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle{
+      margin:6px 0 18px 0;
+      color:#6b6b6b;
+      font-size:14px;
+    }
+
+    nav.top{
+      display:flex;
+      gap:12px;
+      margin-bottom: 18px;
+    }
+
+    nav.top a{
+      text-decoration:none;
+      padding:8px 12px;
+      background:linear-gradient(180deg, rgba(212,175,55,0.12), rgba(212,175,55,0.06));
+      border-radius:8px;
+      color: var(--arsenal-dark);
+      font-weight:600;
+      border:1px solid rgba(122,11,11,0.06);
+      font-size:14px;
+    }
+
+    article{
+      padding:10px 6px 6px 6px;
+    }
+
+    section.chapter{
+      margin: 26px 0;
+      padding: 18px 20px;
+      border-left: 6px solid rgba(183,28,28,0.08);
+      background: linear-gradient(90deg, rgba(255,255,255,0.8), rgba(255,250,248,0.6));
+      border-radius:10px;
+    }
+
+    h2{
+      margin:0 0 8px 0;
+      font-family: var(--serif);
+      color: var(--arsenal-red);
+      font-size:20px;
+      letter-spacing:-0.3px;
+    }
+
+    p{
+      margin: 12px 0;
+      font-size:15px;
+      color:#333;
+    }
+
+    .meta{
+      font-size:13px;
+      color:#666;
+      margin-top:8px;
+    }
+
+    blockquote{
+      margin:12px 0;
+      padding:12px 16px;
+      background:#fffefc;
+      border-left:4px solid var(--accent-gold);
+      border-radius:8px;
+      color:#444;
+    }
+
+    .small{
+      font-size:13px;
+      color:#666;
+    }
+
+    footer{
+      margin-top: 28px;
+      padding-top:18px;
+      border-top:1px dashed #f0e6e6;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    footer .back{
+      text-decoration:none;
+      background: var(--arsenal-red);
+      color:#fff;
+      padding:10px 14px;
+      border-radius:8px;
+      font-weight:700;
+    }
+
+    @media (max-width:700px){
+      .container{ margin:12px; padding:18px; }
+      header{ gap:10px; }
+      h1{ font-size:22px; }
+      .crest{ width:56px; height:56px; font-size:18px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="crest">CW</div>
+      <div>
+        <h1>Personal Diary — Carlos Waithaka</h1>
+        <div class="subtitle">Born 30 November 2006 • A diary of faith, family, learning, and hope</div>
+      </div>
+    </header>
+
+    <nav class="top">
+      <a href="index.html">← Back to Home</a>
+      <a href="#childhood">Childhood</a>
+      <a href="#family">Family</a>
+      <a href="#education">Education</a>
+      <a href="#faith">Faith</a>
+      <a href="#hobbies">Hobbies</a>
+      <a href="#challenges">Challenges</a>
+      <a href="#dreams">Dreams</a>
+      <a href="#reflections">Reflections</a>
+    </nav>
+
+    <article>
+
+      <!-- Introduction -->
+      <section class="chapter" id="intro">
+        <h2>Introduction</h2>
+        <p>
+          I am <strong>Carlos Waithaka</strong>. I write these pages as a record of who I am, where I have come from, and where I want to go.
+          I was born on <strong>30 November 2006</strong>. From the day I came into the world, my life has been defined by family, faith, learning, and the quiet determination to keep moving forward.
+        </p>
+
+        <p class="meta">
+          A diary is not simply a place for facts — it is the place where I let my heart speak. Here I record the days, the lessons, the failures, and the small victories that stitch my life together.
+        </p>
+      </section>
+
+      <!-- Childhood -->
+      <section class="chapter" id="childhood">
+        <h2>Childhood</h2>
+
+        <p>
+          I remember being small and curious — the kind of child who wanted to touch everything and understand how it worked. My earliest memories are simple: a house filled with quiet conversation, the smell of porridge in the morning, my mother’s hands always busy working to make sure we had what we needed.
+        </p>
+
+        <p>
+          Being the <strong>last born</strong> carried with it a softness from my family and, at times, an extra burden of expectations. I was someone to be protected, nurtured, and guided. In the same breath, being the youngest made me watch what my siblings did and learn from their choices — both the right steps and the mistakes.
+        </p>
+
+        <p>
+          School days were full of small discoveries. I loved the moments when a teacher explained something and the world became clearer. I was never the loudest in class, but I listened, I practiced, and I took pride in the things I could do well. Computers fascinated me from the start — I would look at screens, wonder what each piece of code made possible, and imagine myself making things one day.
+        </p>
+
+        <blockquote>
+          "Curiosity was my first teacher; faith became my companion as I grew."
+        </blockquote>
+
+        <p>
+          It was in these earliest years that I learned the value of hope. Even when money was tight or a rainy day made plans uncertain, we found small reasons to smile and reasons to press on.
+        </p>
+      </section>
+
+      <!-- Family -->
+      <section class="chapter" id="family">
+        <h2>Family</h2>
+
+        <p>
+          My mother, <strong>Joyce Nduta Njuguna</strong>, is the heart of my story. She raised me and my siblings with quiet strength and an unwavering sense of duty. She is the woman who taught me that dignity is not given by wealth but by how you treat others, how you hold yourself in the storms of life, and how you keep your promises.
+        </p>
+
+        <p>
+          I have an elder brother, <strong>Elvis Njuguna</strong>, and a sister, <strong>Purity Wanjiku</strong>. Elvis has always been a protector — sometimes stern, often practical. Purity brings a warmth and softness to the family, a reminder that even in hard times there is room for laughter and gentle care.
+        </p>
+
+        <p>
+          Growing up with a single mother brought challenges that tested us. There were seasons of scarcity where choices had to be made carefully: school fees, uniform costs, food on the table. But there were also seasons of rich, quiet learning — moments when I watched my mother sacrifice, not with bitterness but with a steady hope that she could provide a future for us.
+        </p>
+
+        <p>
+          Family, for me, has always been less about titles and more about presence. The daily small things — a late-night conversation, a helping hand with homework, a remembered birthday — became the threads that wove us together.
+        </p>
+
+        <p>
+          Even now, when life pulls me in different directions with university schedules and projects, my family remains central. I owe much of who I am to the example of my mother and the influence of my siblings.
+        </p>
+      </section>
+
+      <!-- Education -->
+      <section class="chapter" id="education">
+        <h2>Education</h2>
+
+        <p>
+          My school years were a mixture of hard work, dreams, and the occasional fear of falling behind. I worked at school because I wanted better chances, better choices, and a future that would allow me to help my family.
+        </p>
+
+        <p>
+          In the end, my KCSE result came with a mean grade of <strong>B</strong>. The journey through subjects tested my patience. Mathematics gave me challenges, Chemistry taught me to examine closely, and English opened new doors for expression. Computer studies were where my heart truly beat faster — I achieved an A- and felt that bright spark of possibility.
+        </p>
+
+        <p>
+          After school, I pursued higher learning with purpose. I enrolled for a <strong>Bachelor of Business Information Technology (BBIT)</strong> at the <strong>University of Embu</strong>. Simultaneously, I joined the <strong>University of the People</strong> to study <strong>Computer Science</strong>. Studying both business and technology is not accidental; I believe that combining the two will allow me to build products and services that are not just clever, but useful to people.
+        </p>
+
+        <p>
+          Each lecture, late-night reading, assignment and exam has been a step in a longer climb. The balance between two programmes is not easy, but it is deliberate. I want the breadth of business thinking to guide the technical solutions I will one day build.
+        </p>
+
+        <p>
+          Along the way I created small projects that taught me more than exams. A personal budget tracker, exercises in Python (variables, input/output, loops), and small web pages — each project was a lesson in patience and an experiment in turning ideas into reality.
+        </p>
+
+        <p class="small">
+          (Side note — I keep a Python Learning Journal where I track progress: variables, conditionals, loops, functions, file handling, and small projects. I want to grow this into something bigger.)
+        </p>
+      </section>
+
+      <!-- Faith -->
+      <section class="chapter" id="faith">
+        <h2>Faith and Spiritual Journey</h2>
+
+        <p>
+          My faith is not just a part of my life — it is the backbone. I began a concentrated spiritual journey in 2025 that changed my daily rhythms. On <strong>24 March 2025</strong> I started a structured plan to read the entire Bible, with a goal of finishing by <strong>31 December 2025</strong>. I committed to spending <strong>five hours</strong> daily in Bible reading and <strong>one hour</strong> listening to sermons. I also fast every Friday from <strong>6 a.m. to 6 p.m.</strong> — a discipline that brings clarity, humility, and renewed focus.
+        </p>
+
+        <p>
+          These practices changed how I saw my studies, my relationships, and my work. Prayer and reading sharpened my patience, gave me language for gratitude, and taught me a kind of surrender that is not passive but active — a willingness to work, to wait, and to trust.
+        </p>
+
+        <p>
+          Some days are quiet and full of revelation; other days feel dry and routine. Still, the discipline of showing up — for scripture, for prayer, for fasting — has made my faith a living thing. It has given me a moral center and a source of comfort during difficult nights.
+        </p>
+
+        <blockquote>
+          "Faith is not a single moment; it is the daily step of choosing what matters."
+        </blockquote>
+
+        <p>
+          I have learned that spiritual growth is not measured only by big moments. It is measured by consistency: waking early, reading slowly, listening with attention, and letting scripture shape decisions rather than emotion alone.
+        </p>
+      </section>
+
+      <!-- Hobbies and Passions -->
+      <section class="chapter" id="hobbies">
+        <h2>Hobbies & Passions</h2>
+
+        <p>
+          I have always needed an outlet. For me, that outlet has been a mixture of sport, coding, and quiet reading. Football is not just a pastime — it is a passion. I support <strong>Arsenal FC</strong> with that loyal intensity that makes wins sweeter and losses lessons in humility. Watching a match or discussing tactics helps me relax and connect with friends.
+        </p>
+
+        <p>
+          Coding is a different kind of excitement. When a piece of code runs and produces the result I imagined, there is a small electric joy that follows. I started with basic Python: variables, conditionals, loops. From there I built small projects, like my personal budget tracker. Each project is a reminder that ideas can be made visible and useful.
+        </p>
+
+        <p>
+          I enjoy reading — not just for leisure but for growth. Books, articles, and tutorials help me learn new techniques and broaden my understanding of the world. Writing, too, has become a way to process what I feel and what I hope.
+        </p>
+
+        <p>
+          These hobbies balance my life. When studies get heavy or when an exam weighs on me, football, code, and quiet reading remind me to live fully, not only to achieve.
+        </p>
+      </section>
+
+      <!-- Challenges and Lessons -->
+      <section class="chapter" id="challenges">
+        <h2>Challenges & Lessons</h2>
+
+        <p>
+          Life has taught me that hardship is not a verdict but a teacher. Growing up in a single-parent household meant that we adapted early. There were times when I felt embarrassed by lack, times when I compared myself to others and felt small. But those moments built character I would not trade.
+        </p>
+
+        <p>
+          One lesson I learned early is that help can come in unexpected forms. A teacher who notices effort, a friend who shares study notes, or a relative who offers encouragement — these small acts can change a path. I learned to be grateful for help and, perhaps more importantly, to be willing to help others when the chance came.
+        </p>
+
+        <p>
+          Another lesson: consistency beats intensity. It is better to study a little every day than to cram in a panic. It is better to pray daily than to attempt radical changes and then drift away. These small daily disciplines compound into real progress.
+        </p>
+
+        <p>
+          I also learned resilience. When a project failed or a grade was lower than expected, I learned to regroup, to find what didn’t work, and to try again with a clearer plan. Failure is not the end — it is a guidepost to improvement.
+        </p>
+      </section>
+
+      <!-- Relationships & Community -->
+      <section class="chapter" id="relationships">
+        <h2>Relationships & Community</h2>
+
+        <p>
+          I owe a deep gratitude to those who have walked beside me: my mother, my siblings, teachers, classmates, and friends. Relationships are the well where courage and joy come from. When I was uncertain about choices — which course to focus on, how to manage time between two universities — conversations with trusted people helped me find clarity.
+        </p>
+
+        <p>
+          I also try to be part of communities that lift others. Whether that is a study group for a tough module or a small group at church, I have found that shared effort multiplies results. Building networks is not about personal gain alone; it is about mutual growth and mutual care.
+        </p>
+
+        <p>
+          If I am honest, there are times when I hold back out of fear — fear of rejection, fear of failing others. Each time I face that fear and choose outreach, I feel my world expand.
+        </p>
+      </section>
+
+      <!-- Daily Routine & Discipline -->
+      <section class="chapter" id="routine">
+        <h2>Daily Routine & Discipline</h2>
+
+        <p>
+          Discipline is not glamorous, but it is the engine of progress. My days are shaped by small rhythms: waking early, reading scripture, studying, coding practice, and moments of rest. I usually wake around 8:00 a.m., though at times I push myself to begin earlier when deadlines approach.
+        </p>
+
+        <p>
+          The decision to reserve set hours for Bible study and sermons is a discipline that changed the quality of my days. Five hours of study might sound like a lot, but broken into parts — morning reading, midday reflection, evening review — it became manageable and nourishing. The one hour of sermon listening is time dedicated to spiritual formation and practical application.
+        </p>
+
+        <p>
+          I schedule coding practice like medicine: consistent and measured. Little by little, the skills accumulate. This is the approach I take with studies, prayer, and personal growth — steady investment, not frantic bursts.
+        </p>
+      </section>
+
+      <!-- Projects and Achievements -->
+      <section class="chapter" id="projects">
+        <h2>Projects & Achievements</h2>
+
+        <p>
+          My early projects were small but meaningful. A budget tracker taught me about forms, input validation, and basic file handling. Python exercises sharpened my logic. Creating this website — even if simple — made me realize how the web can become a portfolio that opens doors.
+        </p>
+
+        <p>
+          I have also worked to keep records of my learning: a Python Learning Journal where I list topics covered, exercises completed, and areas to review. That kind of documentation is surprisingly motivating: when I look back, I can see how far I have come.
+        </p>
+
+        <p>
+          Another personal milestone was being part of online learning communities and being accepted into University of the People and University of Embu. Each acceptance reinforced the belief that effort and persistence pay off.
+        </p>
+      </section>
+
+      <!-- Future Dreams -->
+      <section class="chapter" id="dreams">
+        <h2>Dreams & Aspirations</h2>
+
+        <p>
+          I dream of building solutions that matter. I imagine applications that support small businesses, websites that showcase young entrepreneurs, and systems that make life easier for people in everyday tasks. Combining BBIT and Computer Science is my path to achieving that dream.
+        </p>
+
+        <p>
+          Beyond career success, I dream of being a man who is faithful — faithful to God, faithful to family, and faithful to the people who trust me. I want to be the kind of person who uses success to lift others, not to separate myself from them.
+        </p>
+
+        <p>
+          I also dream about home — a space of welcome where family gathers, where my mother can rest in comfort, and where the sacrifices of the past are honoured in the peace of the present.
+        </p>
+      </section>
+
+      <!-- Reflections -->
+      <section class="chapter" id="reflections">
+        <h2>Reflections</h2>
+
+        <p>
+          Writing this diary reminds me that life is a story of small, persistent choices. The big moments are important — graduation, acceptance letters, awards — but most of life is made up of humble daily steps. Faith taught me to value the small, and family taught me to value presence. Education taught me to value discipline, and coding taught me to value experimentation.
+        </p>
+
+        <p>
+          I am proud of what we have survived and the person I am becoming. I do not pretend to be perfect. I make mistakes. But each mistake is an invitation to learn and to grow.
+        </p>
+
+        <p>
+          As I look forward, I place trust in a few simple commitments: keep learning, keep serving, and keep showing up. To those who read this someday — whether a friend, an employer, or my children in the future — know that this story is honest. It is not finished; it is living and active, and I am still writing it.
+        </p>
+
+        <p class="small">
+          Written with gratitude, discipline, and hope — <strong>Carlos Waithaka</strong>.
+        </p>
+      </section>
+
+      <!-- Closing note -->
+      <section class="chapter" id="closing">
+        <h2>Closing Note</h2>
+
+        <p>
+          If you copied this into your website and read it now, then these words have done their job: they have shared a life, a set of values, and a vision for what comes next. May these pages remind me — and those who care about me — that the future is built from the faithful choices of today.
+        </p>
+
+        <p>
+          If you want me to expand any chapter with specific memories, dates, or more vivid scenes — for example a school day memory, a particular difficult season, or a joyful family celebration — tell me which part and I will deepen it with detail until this becomes exactly the full-length diary you want.
+        </p>
+
+      </section>
+
+    </article>
+
+    <footer>
+      <a class="back" href="index.html">← Back to Home</a>
+      <div class="small">© Carlos Waithaka — written as a personal diary. Born 30/11/2006. Last updated: Sept 17, 2025.</div>
+    </footer>
+  </div>
+</body>
+</html>
